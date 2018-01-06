@@ -1,5 +1,5 @@
 {
-  "name": "spectacle-code-slide",
+  "name": "spectacle-code-slide-fork-react16",
   "version": "0.4.0",
   "description": "Present code with style.",
   "main": "lib/index.js",
