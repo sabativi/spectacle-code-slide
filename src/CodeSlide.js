@@ -58,11 +58,13 @@ class CodeSlide extends React.Component {
         note: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
       })
     ),
-    showLineNumbers: PropTypes.bool
+    showLineNumbers: PropTypes.bool,
+    localStorage: PropTypes.bool
   };
 
   static defaultProps = {
-    showLineNumbers: true
+    showLineNumbers: true,
+    localStorage: false,
   };
 
   static contextTypes = {
@@ -112,10 +114,12 @@ class CodeSlide extends React.Component {
   }
 
   getStorageItem() {
-    return +localStorage.getItem(this.getStorageId());
+    if (this.props.localStorage === false) return;
+    return localStorage.getItem(this.getStorageId());
   }
 
   setStorageItem(value) {
+    if (this.props.localStorage === false) return;
     return localStorage.setItem(this.getStorageId(), "" + value);
   }
 
