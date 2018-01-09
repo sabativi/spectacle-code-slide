@@ -12,7 +12,7 @@ const styles = {
   // textTransform: 'uppercase',
   whiteSpace: 'nowrap',
   zIndex: 1,
-  backgroundColor: 'rgba(0,0,0,0.5)'
+  backgroundColor: 'rgba(0,0,0,1)'
 };
 
 class CodeSlideTitle extends React.Component {
